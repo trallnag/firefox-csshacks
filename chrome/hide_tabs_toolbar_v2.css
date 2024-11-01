@@ -4,7 +4,7 @@ See the above repository for updates as well as full license text. */
 /* This requires Firefox 133+ to work */
 
 @media (-moz-bool-pref: "sidebar.verticalTabs"){
-  #sidebar-main{
+  #main-window[titlepreface*="| "] #sidebar-main{
     visibility: collapse;
   }
 }
@@ -17,13 +17,13 @@ See the above repository for updates as well as full license text. */
   }
 }
 @media not (-moz-bool-pref: "sidebar.verticalTabs"){
-  #TabsToolbar:not([customizing]){
+  #main-window[titlepreface*="| "] #TabsToolbar{
     visibility: collapse;
   }
   :root[sizemode="fullscreen"] #nav-bar > .titlebar-buttonbox-container{
     display: flex !important;
   }
-  :root:is([tabsintitlebar],[customtitlebar]) #toolbar-menubar:not([autohide="false"]) ~ #nav-bar{
+  :root[tabsintitlebar][titlepreface*="| "] #toolbar-menubar:not([autohide="false"]) ~ #nav-bar{
     > .titlebar-buttonbox-container{
       display: flex !important;
     }
