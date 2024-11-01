@@ -17,3 +17,18 @@ Decrease size of the sidebar header.
   height: 14px !important;
   opacity: 0.6 !important;
 }
+
+/*
+Decrease padding of bookmark menu items.
+
+Based on: https://support.mozilla.org/en-US/questions/1337842
+*/
+
+
+menupopup:not(.in-menulist) > menuitem,
+menupopup:not(.in-menulist) > menu {
+  padding-block: 2px !important;
+}
+:root {
+  --arrowpanel-menuitem-padding: 4px 8px !important;
+}
